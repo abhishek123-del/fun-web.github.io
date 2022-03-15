@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/bootstrap.css">
+    <title>Abhishek web</title>
+</head>
+
+<body>
+    <!-- here is the starting -->
+    <!-- Main start -->
+    <div class="container">
+        <!-- header start -->
+        <div class="row" id="header">
+            <!-- logo -->
+            <div class="col-6  mt-4 ">
+                <img src="Images/ao-smith.png" alt="logo" width="200px" height="60px">
+            </div>
+            <!-- logo end   -->
+            <!-- navigation  start  -->
+            <div class="col-lg-6 d-lg-block d-none mt-4">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a href="#" class="nav-link text-black">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-black">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-black">Courses</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-black">Gallery</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-black">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- navigation end    -->
+
+            <!-- harmburger start for responsive web   -->
+            <div class="col-6 d-lg-none border d-flex justify-content-end" id="Btn">
+                <img src="Images/mobile-nav-icon.png"  width="60px" height="50px" alt="btn" id="sidebar-btn">
+            </div>
+            <!-- harmburger end   -->
+
+            <!-- side bar for responsive web start  -->
+            <div class="col-6 bg-black mt-4 d-flex justify-content-between animation d-none" id="sidebar">
+               <ul class="nav d-flex flex-column">
+                   <li class="nav-item"><a href="#" class="nav-link text-white">Home</a></li>
+                   <li class="nav-item"><a href="#" class="nav-link text-white">About</a></li>
+                   <li class="nav-item"><a href="#" class="nav-link text-white">Courses</a></li>
+                   <li class="nav-item"><a href="#" class="nav-link text-white">Gallery</a></li>
+                   <li class="nav-item"><a href="#" class="nav-link text-white">Contact Us</a></li>
+               </ul>
+               <div class="btn text-white" id="X">X</div>
+            </div>
+            <!-- side bar for responsive web end   -->
+        </div>
+        <!-- header end    -->
+    </div>
+    <!-- Main end   -->
+
+    <!-- slider start   -->
+    <div class="container-fluid border mt-2">
+        <div class="col bg"></div>
+    </div>
+    <!-- slider end   -->
+       
+   <script>
+       var sidebar = document.getElementById("sidebar");
+       var Btn = document.getElementById("Btn");
+       var head = document.getElementById("header");
+       var sidebarBtn = document.getElementById("sidebar-btn").onclick = function(){
+           console.log(sidebar.innerHTML); 
+           sidebar.classList.remove('d-none');
+           Btn.classList.add("d-none");
+       }
+
+    //    remove sidebar  
+    var remsidebar = document.getElementById("X");
+    remsidebar.addEventListener("click",function(){
+        sidebar.classList.add("d-none");
+        Btn.classList.remove("d-none");
+    })
+   </script>
+
+</body>
+
+</html>
